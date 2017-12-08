@@ -65,7 +65,7 @@
         <div class="card-save-form">
             <div class="form">
 
-                <form action="/edit" method="post">
+                <form action="/saveImage" method="post">
                     <label class="label-optional label-optional-personal label-required-public" for="Title">Title</label>
                     <input id="Title" name="Title" type="text" value="" />
                     <input id="Description" name="Description" type="hidden" value="Some short or long description" />
@@ -77,14 +77,6 @@
                 </form>
                 <div class="status-error"></div>
                 <div class="save-progress">Saving...Please Wait...</div>
-            </div>
-            <p class="card-save-form-terms"><i class="ecc-icon ecc-icon-info"></i> Please note that by saving this card you agree to the <a href="#" target="_blank">terms</a>                of this site.</p>
-            <div class="card-save-form-download">
-                <form action="/Card/DownloadCard" method="post">
-                    <input type="hidden" name="data" />
-                    <p><i class="ecc-icon ecc-icon-save"></i> If You don't want to email or share your card you can alternatively
-                        <a href="#">download it from here</a>.</p>
-                </form>
             </div>
         </div>
 
@@ -143,7 +135,7 @@
         var environment = {
             fileInputSupported: isFileInputSupported,
             hasTouch: hasTouch,
-            saveUrl: "card/SaveCard",
+            saveUrl: "/SaveCard",
             cardConfig: [{src:'background/white.png',type:'background'}],
             contentPath: "content/",
             assetsPath:  "content/assets/",

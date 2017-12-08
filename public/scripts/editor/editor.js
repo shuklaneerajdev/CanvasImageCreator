@@ -13,13 +13,13 @@ $(function () {
         scale: 0.75,
         progress: ".editor-progress"
     });
-	
+
 	var wm = new WinManager({
 	    container: '.editor',
 		shapes: shapes,
 		card: card
 	});
-	
+
 	var pm = new PanManager({
 	    container: ".editor-pans",
 		propertySettings: propertySettings,
@@ -41,7 +41,7 @@ $(function () {
     card.on('item-selected', function (item) {
         tb.update(item.type);
     });
-    
+
     $('.editor-navbar li').click(function () {
         var type = $(this).attr('data-ecc-id');
         var title = $(this).text();
@@ -49,7 +49,6 @@ $(function () {
     });
 
     $('.card-save-form button.save').click(function () {
-		alert('Please update the save form post url');
         var btn = $(this);
         btn.attr('disabled', 'disabled');
         $('.save-progress').show();
@@ -66,7 +65,7 @@ $(function () {
                 data: $('.card-save-form form').serialize()
             }).done(function (msg) {
                 if (msg.success) {
-                    window.location = msg.redirect;
+                    window.location = msg.url;
                 } else {
                     showSaveError(msg.message);
                 }
@@ -82,11 +81,11 @@ $(function () {
         e.preventDefault();
         card.toDataUrl(function (d) {
 			window.open(d);
-        });        
+        });
     });
 
     function speedTest(callback) {
-        var img = new Image();        
+        var img = new Image();
         img.onload = function () {
             var cv = document.createElement('canvas');
             var start = new Date();
@@ -120,7 +119,7 @@ $(function () {
         card.on('ready', function () {
             // show save dialog
             if (hash == "#save") {
-                wm.saveCard();                
+                wm.saveCard();
             }
             window.location.hash = "#edit";
         });

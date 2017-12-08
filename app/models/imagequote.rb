@@ -1,0 +1,2 @@
+class Imagequote < ApplicationRecord
+end
