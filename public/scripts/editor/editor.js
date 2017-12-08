@@ -48,7 +48,7 @@ $(function () {
         wm.shapeSelector(type, title);
     });
 
-    $('.card-save-form button.save').click(function () {
+    $('#saveOneClick').click(function () {
         var btn = $(this);
         btn.attr('disabled', 'disabled');
         $('.save-progress').show();

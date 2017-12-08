@@ -19,12 +19,12 @@
 
 <body>
     <div class="container">
+      <button type="submit" class="save" id="saveOneClick" style="width:160px;">Save</button>
         <div class="editor border-box">
             <div class="editor-navbar clearfix">
                 <ul>
                     <li class="btn border-box tip-add-text" data-ecc-id="text"><span><i class="ecc-icon ecc-icon-plus"></i> Text</span></li>
                     <li class="btn border-box tip-add-clipart" data-ecc-id="clipart"><span><i class="ecc-icon ecc-icon-plus"></i> Clipart</span></li>
-                    <li class="btn last border-box tip-save-card" data-ecc-id="save"><span><i class="ecc-icon ecc-icon-save"></i> Save</span></li>
                 </ul>
             </div>
             <div class="editor-body" tabindex="0">
@@ -73,7 +73,6 @@
                     <input id="definition" name="definition" type="hidden" value="[{src:&#39;background/notebook.png&#39;,type:&#39;background&#39;}]"
                     />
                     <input id="filtersDisabled" name="filtersDisabled" type="hidden" value="" />
-                    <button type="submit" class="save" style="width:160px;">Save</button>
                 </form>
                 <div class="status-error"></div>
                 <div class="save-progress">Saving...Please Wait...</div>
